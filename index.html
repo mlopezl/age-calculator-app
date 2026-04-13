@@ -2,36 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="./styles.css">
+
   <title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Day
-  DD
+  <div class="calculator">
+    <form class="calculator__date" novalidate>
+      <div class="calculator__day">
+        <label for="day">Day</label>
+        <input type="number" placeholder="DD" min="1" max="31" name="day" id="day" inputmode="numeric" required>
+      </div>
+      <div class="calculator__month">
+        <label for="month">Month</label>
+        <input type="number" placeholder="MM" min="1" max="12"
+        name="month" id="month" inputmode="numeric" required>
+      </div>
+      <div class="calculator__year">
+        <label for="year">Year</label>
+        <input type="number" placeholder="YYYY" min="1900" max="2100"
+        name="year" id="year" inputmode="numeric" required >
+      </div>
+      <button><img src="./assets/images/icon-arrow.svg" alt="submit button"></button>
+    </form>
+    <main class="calculator__results">
+      <p class="calculator__result"><strong>--</strong> years</p>
+      <p class="calculator__result"><strong>--</strong> months</p>
+      <p class="calculator__result"><strong>--</strong> days</p>
+    </main>
+  </div>
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
+  <script src="./app.js"></script>
   
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
 </body>
 </html>
