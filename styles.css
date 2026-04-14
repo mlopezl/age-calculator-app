@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --Purple-500: hsl(259, 100%, 65%);
+  --Red-400: hsl(0, 100%, 67%);
+  --White: hsl(0, 100%, 100%);
+  --Grey-100: hsl(0, 0%, 94%);
+  --Grey-200: hsl(0, 0%, 86%);
+  --Grey-500: hsl(0, 1%, 44%);
+  --Black: hsl(0, 0%, 0%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-color: var(--Grey-100);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator{
+  width: 90%;
+   height: 400px;
+  background-color: var(--White);
+  border-radius: 20px 20px 60px 20px;
+  padding: 15px;
+}
+
+.calculator__date{
+  display: flex;
+  position: relative;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  box-shadow: 0px 1px 1px -1px var(--Grey-500);
+}
+
+.calculator__input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.calculator__input label{
+  font-size: 0.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--Grey-500);
+  text-transform: uppercase;
+}
+
+.calculator__input input{
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--Grey-200);
+  color: var(--Black);
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  font-size: 0.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -6,4 +82,38 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.calculator__button{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--Purple-500);
+  bottom: -25px;
+  left: 100px;
+}
+
+.calculator__button img{
+  width: 50%;
+}
+
+.calculator__results{
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 50px;
+}
+
+.calculator__result{
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+}
+
+.calculator__result strong{
+  color: var(--Purple-500);
 }
