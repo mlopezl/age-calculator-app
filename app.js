@@ -16,16 +16,19 @@ month.addEventListener("input", () => {
 });
 
 function calculateAge(day, month, year) {
-  const ageDate = new Date(`"${year}-${month}-${day}"`);
+  const ageDate = new Date(year, month - 1, day);
   const today = new Date();
 
-  let years = today.getFullYear() - ageDate.getFullYear();
-  let months = today.getMonth() - ageDate.getMonth();
-  let days = today.getDate() - ageDate.getDate();
+  const todayClean = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const ageClean = new Date(ageDate.getFullYear(), ageDate.getMonth(), ageDate.getDate());
+
+  let years = todayClean.getFullYear() - ageClean.getFullYear();
+  let months = todayClean.getMonth() - ageClean.getMonth();
+  let days = todayClean.getDate() - ageClean.getDate();
 
   if (days < 0) {
-    meses--;
-    const lastMonth = new Date(hoy.getFullYear(), hoy.getMonth(), 0);
+    months--;
+    const lastMonth = new Date(todayClean.getFullYear(), todayClean.getMonth(), 0);
     days += lastMonth.getDate();
   }
 
