@@ -76,6 +76,18 @@ body{
   font-family: "Poppins", sans-serif;
 }
 
+.calculator__input input:hover,
+.calculator__input input:focus{
+  border: 1px solid var(--Grey-500);
+  transition: all 200ms ease;
+}
+
+.calculator__input p{
+  color: var(--Red-400);
+  font-size: 0.3rem;
+  font-style: italic;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -95,6 +107,12 @@ input[type="number"] {
   background-color: var(--Purple-500);
   bottom: -25px;
   right: calc(50% - 25px);
+}
+
+.calculator__button:hover,
+.calculator__button:focus{
+  background-color: var(--Black);
+  transition: all 200ms ease;
 }
 
 .calculator__button img{
@@ -118,6 +136,10 @@ input[type="number"] {
 
 .calculator__result strong{
   color: var(--Purple-500);
+}
+
+.hidden{
+  display: none !important;
 }
 
 @media(min-width: 426px){

@@ -17,16 +17,22 @@
       <div class="calculator__input">
         <label for="day">Day</label>
         <input type="number" placeholder="DD" min="1" max="31" name="day" id="day" inputmode="numeric" required>
+        <p id="valid-day" class="hidden">Must be a valid day</p>
+        <p id="required-day" class="hidden">The field is required</p>
       </div>
       <div class="calculator__input">
         <label for="month">Month</label>
         <input type="number" placeholder="MM" min="1" max="12"
         name="month" id="month" inputmode="numeric" required>
+        <p id="valid-month" class="hidden">Must be a valid month</p>
+        <p id="required-month" class="hidden">The field is required</p>
       </div>
       <div class="calculator__input">
         <label for="year">Year</label>
         <input type="number" placeholder="YYYY" min="1900" max="2100"
         name="year" id="year" inputmode="numeric" required >
+        <p id="valid-year" class="hidden">Must be in the past</p>
+        <p id="required-year" class="hidden">The field is required</p>
       </div>
       <button class="calculator__button">
         <img src="./assets/images/icon-arrow.svg" alt="submit button">
